@@ -2,8 +2,11 @@ package com.nelson.categoriesVehicules;
 
 public class Lagouna extends Vehicule {
 
+	/**
+	 * Constructeur Lagouna de la marque Renault.
+	 */
 	public Lagouna() {
 		super();
-		this.nomMarque = Marque.RENAULT;
+		this.setNomMarque(Marque.RENAULT);
 	}
 }

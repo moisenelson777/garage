@@ -15,13 +15,25 @@ import com.nelson.optionsVehicules.GPS;
 import com.nelson.optionsVehicules.SiegeChauffant;
 import com.nelson.optionsVehicules.VitreElectrique;
 
-public class TestGarage {
 
+/**Cette classe déclenche l'application Garage. 
+ * 
+ */
+
+
+public class MainGarage {
+
+	
 	public static void main(String[] args) {
 
+		/*
+		 * Instanciation du garage
+		 */
 		Garage garage = new Garage();
-		System.out.println(garage);
 		
+		/*
+		 * Rajout des véhicules avec attributs respectifs
+		 */
 		Vehicule Lag1 = new Lagouna();
 		Lag1.setMoteur(new MoteurEssence("150 Chevaux" , 23123.0d));
 		Lag1.addOption(new GPS());
@@ -64,9 +76,11 @@ public class TestGarage {
 	   	d4_2.addOption(new VitreElectrique());
 	   	garage.addVoiture(d4_2);   			 
 	   	
-	 // garage.afficherGarage();
-	    
-	 /*  	garage.generate(new Writer(){
+
+	   	/*
+	   	 * Affichage du garage via la console
+	   	 */
+	    /*  garage.generate(new Writer(){
             @Override
             public void start() {
 
@@ -83,7 +97,10 @@ public class TestGarage {
             }
         }); */
 	   	
-	garage.generate(new FileWriter("Garage Automobile"));
+	   	/*
+	   	 * Affichage du garage via le fichier txt.
+	   	 */
+	garage.generate(new FileWriter("Garage Automobile")); 
 	}
 
 }

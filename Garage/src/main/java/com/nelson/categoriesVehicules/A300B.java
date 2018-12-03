@@ -2,9 +2,12 @@ package com.nelson.categoriesVehicules;
 
 public class A300B extends Vehicule {
 
+	/**
+	 * Constructeur A300B de la marque Peugeot.
+	 */
 	public A300B() {
 		super();
-		this.nomMarque = Marque.PEUGEOT;
+		this.setNomMarque(Marque.PEUGEOT);
 		
 	}
 }
